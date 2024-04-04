@@ -10,5 +10,6 @@
 		void Update(int id, TEntity entity);
 
 		void Delete(int id);
+
 	}
 }

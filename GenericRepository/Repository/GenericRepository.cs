@@ -5,7 +5,7 @@ namespace GenericRepository.Repository
 {
 
 	// TEntity tipi ancak Baseentity sınıfından kalıtılacak
-	public class GenericRepository<TEntity> : IRepository<TEntity>where TEntity : BaseEntity
+	public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
 	{
 		private AdventureWorks2019Context _context;
         public GenericRepository(AdventureWorks2019Context context)
@@ -33,6 +33,8 @@ namespace GenericRepository.Repository
 		{
 			return _context.Find<TEntity>(id);
 		}
+
+		
 
 		public void Update(int id, TEntity entity)
 		{
